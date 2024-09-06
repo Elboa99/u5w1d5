@@ -16,12 +16,12 @@ public class Edificio {
     private long id;
     private String nome;
     private String indirizzo;
-    private String città;
+    private String citta;
 
     public Edificio(long id, String nome, String indirizzo, String città) {
         this.id = id;
         this.nome = nome;
         this.indirizzo = indirizzo;
-        this.città = città;
+        this.citta = citta;
     }
 }

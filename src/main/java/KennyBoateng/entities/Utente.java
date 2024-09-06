@@ -7,7 +7,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table
+@Table(name = "utente")
 @Getter
 @Setter
 @ToString
@@ -18,14 +18,14 @@ public class Utente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String Username;
-    private String NomeCognome;
-    private String Email;
+    private String username;
+    private String nomeCognome;
+    private String email;
 
     public Utente(Long id, String username, String nomeCognome, String email) {
         this.id = id;
-        Username = username;
-        NomeCognome = nomeCognome;
-        Email = email;
+        this.username = username;
+        this.nomeCognome = nomeCognome;
+        this.email = email;
     }
 }
