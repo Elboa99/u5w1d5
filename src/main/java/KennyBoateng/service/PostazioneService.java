@@ -3,10 +3,11 @@ package KennyBoateng.service;
 import KennyBoateng.entities.Postazione;
 import KennyBoateng.repositories.PostazioneRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-
+@Service
 public class PostazioneService {
     private final PostazioneRepository postazioneRepository;
 

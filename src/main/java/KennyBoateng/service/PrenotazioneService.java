@@ -1,7 +1,7 @@
 package KennyBoateng.service;
 
-import KennyBoateng.entities.Postazione;
-import KennyBoateng.repositories.PostazioneRepository;
+import KennyBoateng.entities.Prenotazione;
+import KennyBoateng.repositories.PrenotazioneRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,32 +9,31 @@ import java.util.List;
 
 @Service
 public class PrenotazioneService {
-    private final PostazioneRepository postazioneRepository;
-
+    private final PrenotazioneRepository prenotazioneRepository;
 
     @Autowired
-    public PrenotazioneService(PostazioneRepository postazioneRepository) {
-        this.postazioneRepository = postazioneRepository;
+    public PrenotazioneService(PrenotazioneRepository prenotazioneRepository) {
+        this.prenotazioneRepository = prenotazioneRepository;
     }
 
 
-    public List<Postazione> getAllPostazioni() {
-        return postazioneRepository.findAll();
+    public List<Prenotazione> getAllPrenotazioni() {
+        return prenotazioneRepository.findAll();
     }
 
 
-    public Postazione getPostazioneById(Long id) {
-        return postazioneRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Postazione non trovata con ID: " + id));
+    public Prenotazione getPrenotazioneById(Long id) {
+        return prenotazioneRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Prenotazione non trovata con ID: " + id));
     }
 
 
-    public Postazione savePostazione(Postazione postazione) {
-        return postazioneRepository.save(postazione);
+    public Prenotazione savePrenotazione(Prenotazione prenotazione) {
+        return prenotazioneRepository.save(prenotazione);
     }
 
 
-    public void deletePostazione(Long id) {
-        postazioneRepository.deleteById(id);
+    public void deletePrenotazione(Long id) {
+        prenotazioneRepository.deleteById(id);
     }
 }
