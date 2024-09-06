@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 
-public interface EdificioRepositoy extends JpaRepository<Edificio,Long> {
+public interface EdificioRepository extends JpaRepository<Edificio,Long> {
 
 }
